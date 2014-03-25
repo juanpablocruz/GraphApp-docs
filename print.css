@@ -223,8 +223,10 @@ table {
 }
 
 td {
-    border: 1px solid #ddd;
-    padding: 6px 13px;
+    border-bottom: 1px solid #DDD;
+    padding: 5px;
+    text-align: left;
+    min-width: 5em;
 }
 
 tr {
@@ -232,8 +234,13 @@ tr {
     border-top: 1px solid #CCC;
 }
 
-tr:nth-child(2n) {
-    background-color: #F8F8F8;
+
+th {
+    background-color: #7C7B6C !important;
+    color: #FFF;
+    padding: 5px;
+    min-width: 5em;
+    text-align: left;
 }
 
 article {
@@ -329,7 +336,7 @@ article {
 .link {
     color:#520;
     background: transparent;
-    font-weight: bold;
+    font-family: "PTS75F-webfont";
     text-decoration: underline;
 }
 
@@ -342,4 +349,49 @@ article {
     display: block;
     float: none;
     margin: 0;
+}
+
+header,footer {
+    position: fixed;
+}
+
+#header-content {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 90%;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header img {
+    width: 100%;
+}
+
+#estudio {
+    width: 8em;
+}
+
+#cores {
+    width: 3em;
+    float: right;
+}
+footer {
+    bottom:1em;
+}
+
+#loadExcel {
+    page-break-before: always !important;
+}
+
+@page {
+    @top-center {
+        content: element(pageHeader);
+    }
+}
+#pageHeader{
+  position: running(pageHeader) !important;
 }
