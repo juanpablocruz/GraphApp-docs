@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GraphApp documentación</title>
+    <link rel="stylesheet" media="screen" href="styles.css">
+    <link rel="stylesheet" media="print" href="print.css">
+    <link rel="stylesheet" href="iconos.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column full"><h1>GraphApp</h1></div>
+        </div>
+        <div class="row">
+            <div class="column full">
+                <p>GraphApp es una aplicación concebida y programada específicamente para Cores. Su uso está destinado a la construcción de gráficos estadísticos, a partir de archivos Excel, para su publicación en la web de Cores.
+
+En esta Guía de uso se muestran todos los pasos y consideraciones necesarias para crear adecuadamente los distintos formatos de gráficos disponibles en la web.</p>
+                </div>
+        </div>
+        <div id="menu" class="row">
+            <div class="column half index-item">        
+            <h3>Paso a paso</h3>
+            <ol>
+                <li><a href="#previo">Consideraciones Previas</a></li>
+                <li><a href="#chartType">Tipos de gráfico</a></li>
+                <li><a href="#loadExcel">Cargar el excel</a></li>
+                <li><a href="#distribucion">Seleccionar distribución</a></li>
+                <li><a href="#ordenar">Ordenar valores</a></li>
+                <li><a href="#deshacer">Cómo deshacer acciones</a></li>
+                <li><a href="#etiquetas">Mostrar etiquetas</a></li>
+                <li><a href="#guardar">Guardar gráfico</a></li>
+            </ol>
+            </div>
+            <div class="column half index-item">
+            <h3>Guía rápida</h3>
+            <ol>
+                <li>Seleccionar el tipo de gráfico</li>
+                <li>Cargar los datos, bien arrastrando el xlsx o bien seleccionandolo</li>
+                <li>Borrar los datos que no queramos mostrar en el gráfico</li>
+                <li>Elegir la distribución de los datos</li>
+                <li>Crear gráfico</li>
+                <li>Ordenar etiquetas o valores</li>
+                <li>Cambiar los colores</li>
+                <li>Guardar el gráfico</li>
+            </ol>
+            </div>
+        </div>
+        <div id="previo">
+            <div class="row">
+            <div class="column full">
+                <h3>Consideraciones Previas</h3>
+                <p>La aplicación deberá estar alojada en un servidor web para poder ejecutarse.</p>
+                <p>Se deberá instalar <a class="link" href="https://support.google.com/chrome/answer/95346?hl=es" target="_blank" alt="Instalar Chrome">Google Chrome</a> ya que la aplicación utiliza tecnología que actualmente sólo está incluida en este programa.</p>
+                <p>El único formato de archivo que acepta la aplicación es <b>.xlsx</b></p>
+            </div>
+        </div>
+            </div>
+        <div id="chartType">
+            <div class="row">
+            <div class="column full">
+                <h3>Tipo de gráfico</h3>
+                <p>El primer paso es la elección del tipo de gráfico</p>
+                <nav><ul><li id="menu-tarta">Tartas<div class="icon-pie icono"></div></li><li id="menu-barra">Barras<div class="icon-bars2 icono"></div></li><li id="menu-historico">Históricos<div class="icon-stats icono"></div></li></ul></nav>
+                <p class="center">Elige entre tartas, barras e históricos</p>
+            </div>
+            </div>
+            <div class="row">
+                <div id="tipo-tarta" class="column one-third">
+                <h4>Tartas</h4>
+                <p>Los gráficos de tartas pueden ser compuestos o simples. La elección de los datos no varía de uno a otro ya que la creación de los grupos se produce en un paso posterior. La elección del tipo de tarta no es definitiva y puede ser cambiada en cualquier momento.</p>
+            </div>
+                <div id="tipo-barra" class="column one-third">
+                <h4>Barras</h4>
+                <p>Los gráficos de barras pueden ser de columnas o de porcentajes. La elección de los datos varía de uno a otro ya que el formato de datos que requiere un gráfico de <b>porcentajes</b> es muy similar al de tartas, sin embargo los gráficos de columnas aceptan un formato con distintos valores por etiqueta.</p>
+                    <p>Una vez elegido el tipo de gráfico de barras no se puede cambiar al otro tipo sin hacer una reelección de los datos.</p>
+                    
+            </div>
+                <div id="tipo-historico" class="column one-third">
+                <h4>Históricos</h4>
+                <p>Los gráficos históricos se clasifican en gráficos de líneas y gráficos de áreas. Los datos que toman cada uno son los mismos, por lo que la elección del tipo de histórico no es vinculante y puede cambiarse en cualquier momento.</p>
+            </div>
+        </div>
+        <div id="loadExcel" class="row">
+            <h3>Cargar el Excel</h3>
+            <div class="full">
+                <p>El segundo paso, tras haber elegido el tipo de gráfico que queremos crear, es el de cargar los datos desde el archivo xlsx.</p>
+                <p>Para ello disponemos de dos métodos: <b>arrastrar el archivo al cuadro con borde discontinuo</b>, o hacer <b>click en el botón de seleccionar archivo</b> y elegir el archivo deseado.</p>
+                <p>Una vez seleccionado el Excel se cargarán los datos de la tabla contenida en el archivo y se mostrarán en una tabla en la pantalla.</p>
+                <p>A continuación hay un proceso de seleccionar que datos no van a llegar al gráfico final. Para ello tendremos en cuenta los siguientes criterios:</p>
+                <ol type="a">
+                    <li>Que tipo de gráfico queremos dibujar.</li>
+                    <li>Qué datos se estan cargando</li>
+                    <li>Qué datos queremos dibujar</li>
+                </ol>
+                <p>El primer punto es importante, ya que dependiendo de que tipo de gráfico queremos crear necesitaremos un formato de datos u otro.</p>
+                <article>
+                <h4>Tartas</h4>
+                    <p>Los gráficos de tartas representan los porcentajes de cada valor con respecto a los otros. Por tanto, necesitaremos proveer a la aplicación con un único valor por campo.</p>
+                    <p>Los datos tienen que mantener una estructura similar a esta:</p>
+                    <table>
+                    <tr><td>Etiqueta</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td></tr>
+                    </table>
+                    
+                    <p>Los valores deben de ser números, los cuales pueden ser enteros o decimales.</p>
+                    </article>
+                <article>
+                <h4>Barras</h4>
+                    <p>Los <b>gráficos de barras</b> están divididos en dos tipos, y cada uno toma distintos datos.</p>
+
+                    <p>Los <b>gráficos de columnas</b> representan los porcentajes de cada valor con respecto a los otros. Por tanto, necesitaremos proveer a la aplicación con un único valor por campo.</p>
+                    <p>Los datos tienen que mantener una estructura similar a esta:</p>
+                    <table>
+                    <tr><td>Etiqueta</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td></tr>
+                    </table>
+                    <p>Los valores deben de ser números. Estos pueden ser enteros o decimales.</p>
+                    
+                    <p>Los <b>gráficos compuestos</b> ofrecen una comparativa entre distintas entradas:</p>
+                    <table>
+                    <tr><th>Campo</th><th>Campo</th><th>Campo</th><th>Campo</th></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                    </table>
+                    
+                    <p>Se creará una columna por cada campo, y una porción de columna por cada etiqueta.</p>
+    
+                </article>
+                <article>
+                <h4>Históricos</h4>
+                    <p>Los gráficos históricos representan una evolución o crecimiento. Por tanto ambos tipos comparten el mismo formato de datos.
+                        </p>
+                    <p>Los datos tienen que mantener una estructura similar a esta:</p>
+
+                    
+                    <table>
+                    <tr><th>Campo</th><th>Campo</th><th>Campo</th><th>Campo</th></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                    <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                    </table>
+                    <p>Los valores deben de ser números, los cuales pueden ser enteros o décimales.</p>
+                    <p>Se creará una línea por cada etiqueta, y un punto por cada campo.</p>
+                </article>
+            <div class="dialog_importante"><p>Es importante tener en cuenta estas indicaciones a la hora de seleccionar datos para no pasar a la aplicación más campos de los necesarios, o en un formato inválido.</p></div>
+            </div>
+        </div>
+        <div class="row" id="distribucion">
+            <h3>Seleccionar distribución</h3>
+            <div class="column full">
+            <p>Este es el paso más <b>importante</b> a la hora de crear un gráfico, ya que aquí es donde decimos a la aplicación que tome los datos en el orden necesario.</p>
+                <ul id="opciones-dist"><li><div><img src="img/arriba.jpg" title="Horizontal"></div><div>Horizontal</div></li><li>
+                    <div><img src="img/lado.png" title="Vertical"></div><div>Vertical</div></li></ul>
+            <p class="break">Por ejemplo, en el caso de las tartas, si tuviesemos una tabla de la siguiente manera:</p>
+                <table>
+                    <tr><td>Otros productos</td><td>14.77</td></tr>
+                    <tr><td>Fuelóleos</td><td>16.94</td></tr>
+                    <tr><td>Gasóleos</td><td>48.62</td></tr>
+                    <tr><td>Querosenos</td><td>8.8</td></tr>
+                    <tr><td>Gasolinas</td><td>8.21</td></tr>
+                    <tr><td>GLP´s</td><td>2.67</td></tr>
+                    </table>
+                <p>Tendremos que indicarle a la aplicación que se trata de un caso de etiqueta-valor, es decir, tiene que leerlo de manera <b>horizontal</b>.</p>
+                <p>Sin embargo, si tuviesemos la tabla así:</p>
+                <table>
+                    <tr><td>Otros productos</td><td>Fuelóleos</td><td>Gasóleos</td><td>Querosenos</td><td>Gasolinas</td><td>GLP´s</td></tr>
+                    <tr><td>14.77</td><td>16.94</td><td>48.62</td><td>8.8</td><td>8.21</td><td>2.67</td></tr>
+                    </table>
+                <p>Tendríamos que decirle que la tome de manera <b>vertical</b></p>
+                <p>Estos son algunos ejemplos de disposición de datos según los otros gráficos.</p>
+                <div class="row">
+                    <div class="column half tablas">
+                <h4>Gráfico de barras y compuesto</h4>
+                <table>
+                <tr><th>Campo</th><th>Campo</th><th>Campo</th><th>Campo</th></tr>
+                <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                </table>
+                <p>Se trata de una disposición <b>vertical</b></p>
+                        </div>
+                    <div class="column half tablas">
+                <h4>Gráfico histórico</h4>
+                <table>
+                <tr><th>Campo</th><th>Campo</th><th>Campo</th><th>Campo</th></tr>
+                <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
+                </table>
+                <p>Se trata de una disposición <b>horizontal</b></p>
+                        </div></div>
+                <p>Una vez seleccionada la disposición, pulsamos el bontón "Crear Gráfico".</p>
+            </div>
+        </div>
+        <div class="row" id="ordenar">
+            <h3>Ordenar los valores</h3>
+            <div class="column full">
+                
+                <p>Una vez se ha generado el gráfico, aparecerá una pantalla donde podemos recolocar los valores para que se dibujen en otra posición, mover las etiquetas, e incluso modificar los valores de los campos y las etiquetas.</p>
+                <ul>
+                <li>Para <b>reordenar los valores</b> basta con pinchar la opción de "Reordenar" si es un gráfico de barras o histórico, (esta opción viene activada por defecto en los gráficos de tartas). Una vez activado sólo hay que arrastrar el elemento a la posición deseada.</li>
+                <li>Para <b>mover las etiquetas</b> basta con arrastrarlas a la posición deseada.</li>
+                <li>Los valores de los datos se pueden <b>modificar</b> cambiando el valor deseado del cuadro de texto que corresponde. Y, en caso de ser el color, haciendo click en el cuadrado de color y seleccionando el color deseado en el cuadro emergente.</li>
+                <li>También es posible <b>eliminar elementos</b>. Para ello basta con hacer click en el círculo con el aspa que acompaña al elemento.</li>
+                    </ul>
+                <div class="dialog_destacado"><p>Tras realizar cualquiera de estos cambios hay que hacer click en "Dibujar" para visualizar los cambios.</p></div>
+                <div class="dialog_importante"><p>Los cambios que únicamente pueden deshacerse son los cambios relativos a eliminar elementos, y solo tras redibujar. Con un limite de dos acciones. <br>Al redibujar otras dos veces, ya no se podrá recuperar el elemento y habrá que cargar los datos de nuevo.</p></div>
+                    
+            </div>
+        </div>
+        <div class="row" id="deshacer">
+            <h3>Cómo deshacer acciones</h3>
+            <div class="column full">
+                <p>La funcionalidad de deshacer se encarga de restaurar los últimos dos cambios estructurales, es decir, cuando se borran datos: tanto filas como columnas o elementos.</p>
+                <p><b>¿Qué acciones puedo deshacer y cómo?</b></p>
+                <p>Dependiendo de en que pantalla nos encontremos podemos deshacer de un modo u otro.</p>
+                <p>En el caso de estar en la <b>ventana de elección de datos</b>, podremos <b>borrar</b> filas y columnas de la tabla pinchando <b>deshacer</b>.</p>
+                <p>Sin embargo, en el caso de estar en la <b>ventana del gráfico</b>, sólo podrás deshacer las acciones de borrar elemento,y <b>solamente tras haber redibujado</b>, ya que éste es el punto de guardado del estado actual.</p>
+                <p>También podemos deshacer el cambio entre las pantallas de selección de datos y la del gráfico, lo que permitirá elegir otra disposición de datos, o borrar filas o columnas sin tener que recargar el archivo Excel.</p>
+            </div>
+        </div>
+        <div class="row" id="etiquetas">
+            <h3>Mostrar etiquetas</h3>
+            <div class="column full">
+                <p>Los gráficos de barras e históricos permiten distintas opciones de visualización complementarias, tales como etiquetas de campos, destacar la sección inferior en los gráficos de barras compuestos, o crear un separador en los gráficos históricos de áreas</p>
+                <ul>
+                <li>Para <b>mostrar las etiquetas</b> hay que activar la casilla de dibujar etiquetas que se encuentra en el lateral derecho de los datos</li>
+                <li>Para <b>activar el destacado</b> se realiza el mismo proceso, activar la casilla de destacar sección cuando esté disponible.</li>
+                <li>Para <b>crear el separador</b>, hay que hacer click en la casilla del separador en el lateral derecho, esto creará una columna con valores inicializados a 0. Deberemos escribir a mano los valores que queremos que tome la línea del separador.</li>
+                <li>También se pueden modificar las <b>unidades del gráfico y la fuente</b>, cambiando los respectivos cuadros de texto y pulsando en "Dibujar".</li>
+                    </ul>
+                <div class="dialog_atencion"><p>Es importante que los valores sean realistas y relacionados con los demás valores. Ya que no se visualizará un separador con valores próximos a cero en una gráfica con valores en el orden del millón.</p></div>
+                <div class="dialog_importante"><p>Todas estas casillas producirán un redibujo del gráfico, por lo que cuentan como puntos de guardado de estado.</p></div>
+                
+            </div>
+        </div>
+        <div class="row" id="guardar">
+            <h3>Guardar gráfico</h3>
+            <div class="column full">
+                <div class="dialog_atencion"><p>Si hay algún problema con la visualización de la tipografía, un simple click en una de las etiquetas del gráfico cargará correctamente la tipografía.</p></div>
+                <p>Cuando tengamos el gráfico listo, basta con hacer click en el botón de Guardar. Esto lo descargará a la carpeta de descargas predeterminada bajo el nombre: Gráfico.jpg, Gráfico-tarta.jpg, Gráfico-barras.jpg, o Gráfico-histórico.jpg.</p>
+                <p>Deberemos cambiar el nombre de manera manual.</p>
+            </div>
+        </div>    
+    </div>
+    <div id="up-button" onclick="subir()" class="icon-arrow-up" title="Subir"></div>
+</body>
+</html>
