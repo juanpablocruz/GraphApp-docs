@@ -1,3 +1,39 @@
+@font-face{
+	font-family:'mic32newrd-md-webfont';
+	src: url('fonts/mic32newrd-md-webfont.eot');
+	src: url('fonts/mic32newrd-md-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/mic32newrd-md-webfont.woff') format('woff'),
+	     url('fonts/mic32newrd-md-webfont.ttf') format('truetype'),
+	     url('fonts/mic32newrd-md-webfont.svg#webfont') format('svg');
+}
+
+@font-face{
+	font-family:'mic32newrd-rg-webfont';
+	src: url('fonts/mic32newrd-rg-webfont.eot');
+	src: url('fonts/mic32newrd-rg-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/mic32newrd-rg-webfont.woff') format('woff'),
+	     url('fonts/mic32newrd-rg-webfont.ttf') format('truetype'),
+	     url('fonts/mic32newrd-rg-webfont.svg#webfont') format('svg');
+}
+
+@font-face{
+	font-family:'PTS55F-webfont';
+	src: url('fonts/PTS55F-webfont.eot');
+	src: url('fonts/PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/PTS55F-webfont.woff') format('woff'),
+	     url('fonts/PTS55F-webfont.ttf') format('truetype'),
+	     url('fonts/PTS55F-webfont.svg#webfont') format('svg');
+}
+
+@font-face{
+	font-family:'PTS75F-webfont';
+	src: url('fonts/PTS75F-webfont.eot');
+	src: url('fonts/PTS75F-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('fonts/PTS75F-webfont.woff') format('woff'),
+	     url('fonts/PTS75F-webfont.ttf') format('truetype'),
+	     url('fonts/PTS75F-webfont.svg#webfont') format('svg');
+}
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -7,12 +43,13 @@ html,body {
     height: 100%;
 }
 body {
-    font-family: "HelveticaNeue",arial,sans-serif;
-    font-weight: 300;
+    font-family: "PTS55F-webfont";
     color: #333;
 }
 
 h1,h3 {
+    font-family:'mic32newrd-rg-webfont';
+    font-weight: normal;
     color: #222;
     -webkit-font-smoothing: antialiased;
 }
@@ -45,10 +82,14 @@ ul {
     padding: 0; 
 }
 
+.bold-text {
+    font-family: "PTS75F-webfont";
+}
+
 ol li,ul li{
+    font-family: "PTS75F-webfont";
     margin: auto;
     padding: 0.4em;
-    font-weight: bold;
     font-size: 0.8em;
 }
 ul li:hover {
@@ -131,8 +172,8 @@ nav li {
     color: #999;
     cursor: pointer;
     display: inline-block;
+    font-family: "PTS55F-webfont";
     font-size: 1.3em;
-    font-weight: 300;
     height: 50%;
     margin-bottom: 0.2rem;
     min-width: 7rem;

@@ -55,7 +55,7 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
                 <h3>Consideraciones Previas</h3>
                 <p>La aplicación deberá estar alojada en un servidor web para poder ejecutarse.</p>
                 <p>Se deberá instalar <a class="link" href="https://support.google.com/chrome/answer/95346?hl=es" target="_blank" alt="Instalar Chrome">Google Chrome</a> ya que la aplicación utiliza tecnología que actualmente sólo está incluida en este programa.</p>
-                <p>El único formato de archivo que acepta la aplicación es <b>.xlsx</b></p>
+                <p>El único formato de archivo que acepta la aplicación es <span class="bold-text">.xlsx</span></p>
             </div>
         </div>
             </div>
@@ -75,7 +75,7 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
             </div>
                 <div id="tipo-barra" class="column one-third">
                 <h4>Barras</h4>
-                <p>Los gráficos de barras pueden ser de columnas o de porcentajes. La elección de los datos varía de uno a otro ya que el formato de datos que requiere un gráfico de <b>porcentajes</b> es muy similar al de tartas, sin embargo los gráficos de columnas aceptan un formato con distintos valores por etiqueta.</p>
+                <p>Los gráficos de barras pueden ser de columnas o de porcentajes. La elección de los datos varía de uno a otro ya que el formato de datos que requiere un gráfico de <span class="bold-text">porcentajes</span> es muy similar al de tartas, sin embargo los gráficos de columnas aceptan un formato con distintos valores por etiqueta.</p>
                     <p>Una vez elegido el tipo de gráfico de barras no se puede cambiar al otro tipo sin hacer una reelección de los datos.</p>
                     
             </div>
@@ -88,7 +88,7 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
             <h3>Cargar el Excel</h3>
             <div class="full">
                 <p>El segundo paso, tras haber elegido el tipo de gráfico que queremos crear, es el de cargar los datos desde el archivo xlsx.</p>
-                <p>Para ello disponemos de dos métodos: <b>arrastrar el archivo al cuadro con borde discontinuo</b>, o hacer <b>click en el botón de seleccionar archivo</b> y elegir el archivo deseado.</p>
+                <p>Para ello disponemos de dos métodos: <span class="bold-text">arrastrar el archivo al cuadro con borde discontinuo</span>, o hacer <span class="bold-text">click en el botón de seleccionar archivo</span> y elegir el archivo deseado.</p>
                 <p>Una vez seleccionado el Excel se cargarán los datos de la tabla contenida en el archivo y se mostrarán en una tabla en la pantalla.</p>
                 <p>A continuación hay un proceso de seleccionar que datos no van a llegar al gráfico final. Para ello tendremos en cuenta los siguientes criterios:</p>
                 <ol type="a">
@@ -112,9 +112,9 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
                     </article>
                 <article>
                 <h4>Barras</h4>
-                    <p>Los <b>gráficos de barras</b> están divididos en dos tipos, y cada uno toma distintos datos.</p>
+                    <p>Los <span class="bold-text">gráficos de barras</span> están divididos en dos tipos, y cada uno toma distintos datos.</p>
 
-                    <p>Los <b>gráficos de columnas</b> representan los porcentajes de cada valor con respecto a los otros. Por tanto, necesitaremos proveer a la aplicación con un único valor por campo.</p>
+                    <p>Los <span class="bold-text">gráficos de columnas</span> representan los porcentajes de cada valor con respecto a los otros. Por tanto, necesitaremos proveer a la aplicación con un único valor por campo.</p>
                     <p>Los datos tienen que mantener una estructura similar a esta:</p>
                     <table>
                     <tr><td>Etiqueta</td><td>Valor</td></tr>
@@ -124,7 +124,7 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
                     </table>
                     <p>Los valores deben de ser números. Estos pueden ser enteros o decimales.</p>
                     
-                    <p>Los <b>gráficos compuestos</b> ofrecen una comparativa entre distintas entradas:</p>
+                    <p>Los <span class="bold-text">gráficos compuestos</span> ofrecen una comparativa entre distintas entradas:</p>
                     <table>
                     <tr><th>Campo</th><th>Campo</th><th>Campo</th><th>Campo</th></tr>
                     <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
@@ -157,7 +157,7 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
         <div class="row" id="distribucion">
             <h3>Seleccionar distribución</h3>
             <div class="column full">
-            <p>Este es el paso más <b>importante</b> a la hora de crear un gráfico, ya que aquí es donde decimos a la aplicación que tome los datos en el orden necesario.</p>
+            <p>Este es el paso más <span class="bold-text">importante</span> a la hora de crear un gráfico, ya que aquí es donde decimos a la aplicación que tome los datos en el orden necesario.</p>
                 <ul id="opciones-dist"><li><div><img src="img/arriba.jpg" title="Horizontal"></div><div>Horizontal</div></li><li>
                     <div><img src="img/lado.png" title="Vertical"></div><div>Vertical</div></li></ul>
             <p class="break">Por ejemplo, en el caso de las tartas, si tuviesemos una tabla de la siguiente manera:</p>
@@ -169,13 +169,13 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
                     <tr><td>Gasolinas</td><td>8.21</td></tr>
                     <tr><td>GLP´s</td><td>2.67</td></tr>
                     </table>
-                <p>Tendremos que indicarle a la aplicación que se trata de un caso de etiqueta-valor, es decir, tiene que leerlo de manera <b>horizontal</b>.</p>
+                <p>Tendremos que indicarle a la aplicación que se trata de un caso de etiqueta-valor, es decir, tiene que leerlo de manera <span class="bold-text">horizontal</span>.</p>
                 <p>Sin embargo, si tuviesemos la tabla así:</p>
                 <table>
                     <tr><td>Otros productos</td><td>Fuelóleos</td><td>Gasóleos</td><td>Querosenos</td><td>Gasolinas</td><td>GLP´s</td></tr>
                     <tr><td>14.77</td><td>16.94</td><td>48.62</td><td>8.8</td><td>8.21</td><td>2.67</td></tr>
                     </table>
-                <p>Tendríamos que decirle que la tome de manera <b>vertical</b></p>
+                <p>Tendríamos que decirle que la tome de manera <span class="bold-text">vertical</span></p>
                 <p>Estos son algunos ejemplos de disposición de datos según los otros gráficos.</p>
                 <div class="row">
                     <div class="column half tablas">
@@ -186,7 +186,7 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
                 <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
                 <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
                 </table>
-                <p>Se trata de una disposición <b>vertical</b></p>
+                <p>Se trata de una disposición <span class="bold-text">vertical</span></p>
                         </div>
                     <div class="column half tablas">
                 <h4>Gráfico histórico</h4>
@@ -196,7 +196,7 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
                 <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
                 <tr><td>Etiqueta</td><td>Valor</td><td>Valor</td><td>Valor</td></tr>
                 </table>
-                <p>Se trata de una disposición <b>horizontal</b></p>
+                <p>Se trata de una disposición <span class="bold-text">horizontal</span></p>
                         </div></div>
                 <p>Una vez seleccionada la disposición, pulsamos el bontón "Crear Gráfico".</p>
             </div>
@@ -207,10 +207,10 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
                 
                 <p>Una vez se ha generado el gráfico, aparecerá una pantalla donde podemos recolocar los valores para que se dibujen en otra posición, mover las etiquetas, e incluso modificar los valores de los campos y las etiquetas.</p>
                 <ul>
-                <li>Para <b>reordenar los valores</b> basta con pinchar la opción de "Reordenar" si es un gráfico de barras o histórico, (esta opción viene activada por defecto en los gráficos de tartas). Una vez activado sólo hay que arrastrar el elemento a la posición deseada.</li>
-                <li>Para <b>mover las etiquetas</b> basta con arrastrarlas a la posición deseada.</li>
-                <li>Los valores de los datos se pueden <b>modificar</b> cambiando el valor deseado del cuadro de texto que corresponde. Y, en caso de ser el color, haciendo click en el cuadrado de color y seleccionando el color deseado en el cuadro emergente.</li>
-                <li>También es posible <b>eliminar elementos</b>. Para ello basta con hacer click en el círculo con el aspa que acompaña al elemento.</li>
+                <li>Para <span class="bold-text">reordenar los valores</span> basta con pinchar la opción de "Reordenar" si es un gráfico de barras o histórico, (esta opción viene activada por defecto en los gráficos de tartas). Una vez activado sólo hay que arrastrar el elemento a la posición deseada.</li>
+                <li>Para <span class="bold-text">mover las etiquetas</span> basta con arrastrarlas a la posición deseada.</li>
+                <li>Los valores de los datos se pueden <span class="bold-text">modificar</span> cambiando el valor deseado del cuadro de texto que corresponde. Y, en caso de ser el color, haciendo click en el cuadrado de color y seleccionando el color deseado en el cuadro emergente.</li>
+                <li>También es posible <span class="bold-text">eliminar elementos</span>. Para ello basta con hacer click en el círculo con el aspa que acompaña al elemento.</li>
                     </ul>
                 <div class="dialog_destacado"><p>Tras realizar cualquiera de estos cambios hay que hacer click en "Dibujar" para visualizar los cambios.</p></div>
                 <div class="dialog_importante"><p>Los cambios que únicamente pueden deshacerse son los cambios relativos a eliminar elementos, y solo tras redibujar. Con un limite de dos acciones. <br>Al redibujar otras dos veces, ya no se podrá recuperar el elemento y habrá que cargar los datos de nuevo.</p></div>
@@ -221,10 +221,10 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
             <h3>Cómo deshacer acciones</h3>
             <div class="column full">
                 <p>La funcionalidad de deshacer se encarga de restaurar los últimos dos cambios estructurales, es decir, cuando se borran datos: tanto filas como columnas o elementos.</p>
-                <p><b>¿Qué acciones puedo deshacer y cómo?</b></p>
+                <p><span class="bold-text">¿Qué acciones puedo deshacer y cómo?</span></p>
                 <p>Dependiendo de en que pantalla nos encontremos podemos deshacer de un modo u otro.</p>
-                <p>En el caso de estar en la <b>ventana de elección de datos</b>, podremos <b>borrar</b> filas y columnas de la tabla pinchando <b>deshacer</b>.</p>
-                <p>Sin embargo, en el caso de estar en la <b>ventana del gráfico</b>, sólo podrás deshacer las acciones de borrar elemento,y <b>solamente tras haber redibujado</b>, ya que éste es el punto de guardado del estado actual.</p>
+                <p>En el caso de estar en la <span class="bold-text">ventana de elección de datos</span>, podremos <span class="bold-text">borrar</span> filas y columnas de la tabla pinchando <span class="bold-text">deshacer</span>.</p>
+                <p>Sin embargo, en el caso de estar en la <span class="bold-text">ventana del gráfico</span>, sólo podrás deshacer las acciones de borrar elemento,y <span class="bold-text">solamente tras haber redibujado</span>, ya que éste es el punto de guardado del estado actual.</p>
                 <p>También podemos deshacer el cambio entre las pantallas de selección de datos y la del gráfico, lo que permitirá elegir otra disposición de datos, o borrar filas o columnas sin tener que recargar el archivo Excel.</p>
             </div>
         </div>
@@ -233,10 +233,10 @@ En esta Guía de uso se muestran todos los pasos y consideraciones necesarias pa
             <div class="column full">
                 <p>Los gráficos de barras e históricos permiten distintas opciones de visualización complementarias, tales como etiquetas de campos, destacar la sección inferior en los gráficos de barras compuestos, o crear un separador en los gráficos históricos de áreas</p>
                 <ul>
-                <li>Para <b>mostrar las etiquetas</b> hay que activar la casilla de dibujar etiquetas que se encuentra en el lateral derecho de los datos</li>
-                <li>Para <b>activar el destacado</b> se realiza el mismo proceso, activar la casilla de destacar sección cuando esté disponible.</li>
-                <li>Para <b>crear el separador</b>, hay que hacer click en la casilla del separador en el lateral derecho, esto creará una columna con valores inicializados a 0. Deberemos escribir a mano los valores que queremos que tome la línea del separador.</li>
-                <li>También se pueden modificar las <b>unidades del gráfico y la fuente</b>, cambiando los respectivos cuadros de texto y pulsando en "Dibujar".</li>
+                <li>Para <span class="bold-text">mostrar las etiquetas</span> hay que activar la casilla de dibujar etiquetas que se encuentra en el lateral derecho de los datos</li>
+                <li>Para <span class="bold-text">activar el destacado</span> se realiza el mismo proceso, activar la casilla de destacar sección cuando esté disponible.</li>
+                <li>Para <span class="bold-text">crear el separador</span>, hay que hacer click en la casilla del separador en el lateral derecho, esto creará una columna con valores inicializados a 0. Deberemos escribir a mano los valores que queremos que tome la línea del separador.</li>
+                <li>También se pueden modificar las <span class="bold-text">unidades del gráfico y la fuente</span>, cambiando los respectivos cuadros de texto y pulsando en "Dibujar".</li>
                     </ul>
                 <div class="dialog_atencion"><p>Es importante que los valores sean realistas y relacionados con los demás valores. Ya que no se visualizará un separador con valores próximos a cero en una gráfica con valores en el orden del millón.</p></div>
                 <div class="dialog_importante"><p>Todas estas casillas producirán un redibujo del gráfico, por lo que cuentan como puntos de guardado de estado.</p></div>
