@@ -44,14 +44,13 @@ html,body {
 }
 body {
     font-family: "PTS55F-webfont";
-    color: #333;
+    color: #63635B;
 }
 
 h1,h3 {
     font-family:'mic32newrd-rg-webfont';
     font-weight: normal;
-    color: #222;
-    -webkit-font-smoothing: antialiased;
+    color: #63635B;
 }
 
 h1 {
@@ -319,7 +318,7 @@ article {
 }
 
 .link {
-    color: #4f98bf !important;
+    color: #0062A0 !important;
     text-decoration: underline;
 }
 
