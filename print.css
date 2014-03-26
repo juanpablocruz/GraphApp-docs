@@ -34,6 +34,10 @@
 	     url('fonts/PTS75F-webfont.svg#webfont') format('svg');
 }
 
+@page { size:8.5in 11in;orphans: 3;
+    widows: 3; margin: 1cm;}
+
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -49,7 +53,7 @@ html,body {
 
 body {
     font-family: "PTS55F-webfont";
-    color: #333;
+    color: #63635B;
     margin-left: 5%;
     margin-right: 5%;
     font-size: 12pt;
@@ -62,13 +66,14 @@ body {
 h1,h3 {
     font-family:'mic32newrd-rg-webfont';
     font-weight: normal;
-    color: #222;
+    color: #63635B;
     -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 2em;
+    text-align: left;
+    margin-top: 3.3em;
+    margin-bottom: 1.3em;
     font-size: 2.5em;
 }
 
@@ -146,7 +151,7 @@ ul li:hover {
 }
 
 .index-item {
-    border-bottom: 2px solid #333;
+    border-right: 1px solid #333;
     min-height: 23em;
 }
 
@@ -178,16 +183,17 @@ nav ul {
     border: 1px solid #D2D2D2;
     box-shadow: inset #FFF 0 1px 0, inset rgba(0, 0, 0, 0.03) 0 -1px 0;
     margin: auto;
-    width: 23.3rem;
+    width: 9rem;
+    display: inline-block;
+    text-align: center;
 }
 
 nav li {
-    border-right: 1px solid #D2D2D2;
     box-sizing: border-box;
     color: #999;
     cursor: pointer;
-    font-family: "PTS55F-webfont";
     display: inline-block;
+    font-family: "PTS55F-webfont";
     font-size: 1.3em;
     height: 50%;
     margin-bottom: 0.2rem;
@@ -241,6 +247,7 @@ th {
     padding: 5px;
     min-width: 5em;
     text-align: left;
+    font-weight: normal;
 }
 
 article {
@@ -269,20 +276,28 @@ article {
 }
 
 .dialog_destacado {
-  background: #55d0ff;
-  color: #006288;
+  background: #4F8BAE;
+  color: white;
 }
 .dialog_destacado:before {
-  color: #a1e5ff;
+  color: white;
   content: "\e616";
 }
 .dialog_importante {
-  background: #e76a6f;
-  color: #731216;
+  background: #D93D16;
+  color: white;
 }
 .dialog_importante:before {
-  color: #f2acaf;
+  color: white;
   content: "\e617";
+}
+.dialog_atencion {
+  background: #e29b03;
+  color: white;
+}
+.dialog_atencion:before {
+  color: white;
+  content: "\e615";
 }
 [class^="dialog_"] {
   border-radius: 0.5em;
@@ -314,14 +329,6 @@ article {
   z-index: 2;
   width: 80%;
 }
-.dialog_atencion {
-  background: #f8c573;
-  color: #976008;
-}
-.dialog_atencion:before {
-  color: #fce3bc;
-  content: "\e615";
-}
 
 #ordenar li, #etiquetas li {
     font-weight: 400;
@@ -337,11 +344,12 @@ article {
     color:#520;
     background: transparent;
     font-family: "PTS75F-webfont";
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .link:after {
     content: " (" attr(href) ") ";
+    text-decoration: none !important;
     font-size: 90%;
 }
 
@@ -352,7 +360,7 @@ article {
 }
 
 header,footer {
-    position: fixed;
+    position: absolute;
 }
 
 #header-content {
@@ -373,25 +381,21 @@ header img {
 
 #estudio {
     width: 8em;
+    float: right;
+    margin-top: 1.4em;
 }
 
 #cores {
-    width: 3em;
-    float: right;
+    width: 11em;
+
 }
 footer {
     bottom:1em;
+    font-size: 0.5em;
 }
 
 #loadExcel {
     page-break-before: always !important;
 }
 
-@page {
-    @top-center {
-        content: element(pageHeader);
-    }
-}
-#pageHeader{
-  position: running(pageHeader) !important;
-}
+
